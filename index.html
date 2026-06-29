@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<meta name="theme-color" content="#17161b" />
+<title>Émilien Gouin-Bonenfant</title>
+<meta name="description" content="Émilien Gouin-Bonenfant — Associate Professor of Economics at HEC Montréal. Research at the intersection of macro, labor, and finance." />
+<meta property="og:title" content="Émilien Gouin-Bonenfant" />
+<meta property="og:description" content="Associate Professor of Economics at HEC Montréal. Research at the intersection of macro, labor, and finance." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>É</text></svg>" />
+<style>
+  :root{
+    --bg:#17161b;
+    --surface:#221f27;
+    --ink:#e9e6e0;
+    --muted:#9b968d;
+    --line:#332f3a;
+    --accent:#e2949e;        /* soft rose (burgundy for dark mode) */
+    --accent-soft:#eeb1ba;
+    --maxw:860px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{color:var(--accent-soft);text-decoration:underline;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+
+  /* Hero */
+  header.hero{padding:56px 0 30px;}
+  .hero-inner{display:flex;gap:34px;align-items:center;flex-wrap:wrap;}
+  .photo{
+    width:160px;height:160px;border-radius:50%;object-fit:cover;flex:none;
+    box-shadow:0 2px 16px rgba(0,0,0,.45);border:3px solid var(--line);
+  }
+  .hero-text{flex:1;min-width:260px;}
+  h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:600;font-size:2.15rem;line-height:1.15;margin:0 0 6px;letter-spacing:.2px;
+  }
+  .role{color:var(--muted);font-size:1.05rem;margin:0 0 16px;}
+  .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;}
+  .btn{
+    display:inline-block;border:1px solid var(--line);background:var(--surface);
+    color:var(--ink);padding:7px 14px;border-radius:8px;font-size:.92rem;
+    transition:border-color .15s,box-shadow .15s,color .15s;
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;box-shadow:0 1px 6px rgba(0,0,0,.05);}
+  .btn.primary{background:var(--accent);color:var(--bg);border-color:var(--accent);}
+  .btn.primary:hover{background:var(--accent-soft);color:var(--bg);border-color:var(--accent-soft);}
+
+  /* Bio */
+  .bio{padding:6px 0 8px;}
+  .bio p{margin:0 0 14px;}
+  .contact{color:var(--muted);font-size:.97rem;}
+
+  /* Sections */
+  section{padding:26px 0;border-top:1px solid var(--line);}
+  h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:1.45rem;font-weight:600;margin:0 0 20px;color:var(--ink);
+  }
+  .paper{margin:0 0 30px;}
+  .paper:last-child{margin-bottom:0;}
+  .paper .title{font-weight:600;font-size:1.06rem;line-height:1.45;}
+  .paper .title .auth{font-weight:400;font-size:.86em;}
+  .paper .title .auth.block{display:block;margin-top:2px;line-height:1.3;}
+  .paper .details{margin-top:2px;font-size:.86rem;}
+  .paper .details .line{margin:0;}
+  .paper .details .line a{margin-right:16px;}
+
+  footer{border-top:1px solid var(--line);padding:24px 0 50px;color:var(--muted);font-size:.86rem;}
+
+  @media (max-width:560px){
+    body{font-size:16px;}
+    header.hero{padding:38px 0 22px;}
+    .hero-inner{gap:20px;}
+    .photo{width:118px;height:118px;}
+    h1{font-size:1.75rem;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-inner">
+      <img class="photo" src="assets/photo.jpg" alt="Émilien Gouin-Bonenfant" />
+      <div class="hero-text">
+        <h1>Émilien Gouin-Bonenfant</h1>
+        <p class="role">Associate Professor of Economics, HEC Montréal</p>
+        <div class="links">
+          <a class="btn primary" href="assets/papers/cv.pdf">Curriculum Vitæ</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=t7r9BYQAAAAJ&hl=en">Google Scholar</a>
+          <a class="btn" href="mailto:emilien.gouin-bonenfant@hec.ca">Email</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="bio">
+    <p>I am an Associate Professor at HEC Montréal. Before that, I was an Assistant Professor at Columbia University (2019–2026) and a graduate student at UCSD (2014–2019).</p>
+    <p>My research interests lie at the intersection of macro, labor, and finance. In ongoing work, I quantify the welfare effects of macroeconomic shocks (saving gluts, tariffs, AI), with an emphasis on redistribution between workers and capitalists.</p>
+  </div>
+
+  <section id="working-papers">
+    <h2>Working Papers</h2>
+
+    <div class="paper">
+      <div class="title"><a href="https://www.matthieugomez.com/files/capinc.pdf">Inelastic Capital in Intangible Economies</a> <span class="auth">(with <a href="https://www.matthieugomez.com/">M. Gomez</a>)</span></div>
+      <div class="details">
+        <div class="line">February 2025</div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/monetary-policy-employment.pdf">Monetary Policy and Employment: Do Financial Constraints Matter?</a> <span class="auth">(with <a href="https://sites.google.com/site/julienjchampagnephd/">J. Champagne</a>)</span></div>
+      <div class="details">
+        <div class="line">October 2025</div>
+        <div class="line">Conditionally accepted — AEJ: Macroeconomics</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="published-papers">
+    <h2>Published Papers</h2>
+
+    <div class="paper">
+      <div class="title"><a href="https://www.matthieugomez.com/files/aeapp.pdf">Producing Tangible and Intangible Capital</a> <span class="auth">(with <a href="https://www.matthieugomez.com/">M. Gomez</a>)</span></div>
+      <div class="details">
+        <div class="line">AEA Papers and Proceedings — Forthcoming</div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/asset-price-redistribution.pdf">Asset-Price Redistribution</a> <span class="auth">(with <a href="https://sites.google.com/site/andreasfagereng/">A. Fagereng</a>, <a href="https://www.matthieugomez.com/">M. Gomez</a>, <a href="https://sites.google.com/site/martinblomhoffholm/">M. Holm</a>, <a href="https://benjaminmoll.com/">B. Moll</a>, <a href="https://sites.google.com/site/gjnatvik/">G. Natvik</a>)</span></div>
+      <div class="details">
+        <div class="line">Journal of Political Economy — November 2025</div>
+        <div class="line">NASDAQ award for the best paper on asset pricing (WFA 2024)</div>
+        <div class="line">
+          <a href="https://www.journals.uchicago.edu/doi/10.1086/736769">Publisher link</a>
+          <a href="assets/papers/asset-price-redistribution-supplement.pdf">Supplementary material</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/wealth-inequality-low-rate.pdf">Wealth Inequality in a Low Rate Environment</a> <span class="auth">(with <a href="https://www.matthieugomez.com/">M. Gomez</a>)</span></div>
+      <div class="details">
+        <div class="line">Econometrica — January 2024</div>
+        <div class="line">Previously titled “A Q-Theory of Inequality”</div>
+        <div class="line">
+          <a href="https://www.econometricsociety.org/publications/econometrica/2024/01/01/Wealth-Inequality-in-a-Low-Rate-Environment">Publisher link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/pareto-extrapolation.pdf">Pareto Extrapolation: An Analytical Framework for Studying Tail Inequality</a> <span class="auth">(with <a href="https://alexisakira.github.io/">A. Toda</a>)</span></div>
+      <div class="details">
+        <div class="line">Quantitative Economics — January 2023</div>
+        <div class="line">
+          <a href="https://github.com/alexisakira/Pareto-extrapolation">Matlab codes for Pareto extrapolation</a>
+          <a href="https://www.econometricsociety.org/publications/quantitative-economics/2023/01/01/Pareto-extrapolation-An-analytical-framework-for-studying-tail-inequality">Publisher link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/canadian-earnings-dynamics.pdf">Four Decades of Canadian Earnings Dynamics Across Workers and Firms</a><span class="auth block">(with <a href="https://economics.uwo.ca/people/faculty/bowlus.html">A. Bowlus</a>, <a href="https://scholar.google.com/citations?user=Sb3BV6wAAAAJ&hl=en">H. Liu</a>, <a href="https://economics.uwo.ca/people/faculty/lochner.html">L. Lochner</a>, <a href="https://www.bankofcanada.ca/profile/youngmin-park/">Y. Park</a>)</span></div>
+      <div class="details">
+        <div class="line">Quantitative Economics — November 2022</div>
+        <div class="line">Part of the <a href="https://www.grid-database.org/">GRID project</a></div>
+        <div class="line">
+          <a href="https://www.econometricsociety.org/publications/quantitative-economics/2022/11/01/Four-decades-of-Canadian-earnings-inequality-and-dynamics-across-workers-and-firms">Publisher link</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/productivity-dispersion-labor-share.pdf">Productivity Dispersion, Between-Firm Competition, and the Labor Share</a></div>
+      <div class="details">
+        <div class="line">Econometrica — November 2022</div>
+        <div class="line">
+          <a href="https://www.econometricsociety.org/publications/econometrica/browse/2022/11/01/Productivity-Dispersion-Between-Firm-Competition-and-the-Labor-Share">Publisher link</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="yr"></span> Émilien Gouin-Bonenfant
+  </footer>
+
+</div>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
