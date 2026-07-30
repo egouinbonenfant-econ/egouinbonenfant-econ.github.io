@@ -10,6 +10,10 @@
 <meta property="og:title" content="Émilien Gouin-Bonenfant" />
 <meta property="og:description" content="Associate Professor in the Department of Applied Economics at HEC Montréal. Research at the intersection of macro, labor, and finance." />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://egouinbonenfant-econ.github.io/" />
+<meta property="og:image" content="https://egouinbonenfant-econ.github.io/assets/photo.jpg" />
+<meta name="twitter:card" content="summary" />
+<link rel="canonical" href="https://egouinbonenfant-econ.github.io/" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>É</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,13 +21,14 @@
 <style>
   :root{
     --bg:#fbf8f0;             /* warm parchment */
-    --surface:#ffffff;
-    --ink:#1f1c17;
-    --muted:#6d6656;
+    --surface:#fffdf8;        /* warm off-white, not pure white */
+    --ink:#1f1c17;            /* primary text */
+    --ink-soft:#4a4438;       /* secondary text: authors, venue details */
+    --muted:#6d6656;          /* tertiary: role, address */
     --line:#e4ddcc;
     --accent:#7c2f2a;         /* deep brick */
     --accent-soft:#9c3f38;
-    --maxw:860px;
+    --maxw:720px;             /* ~75 characters per line */
     --fs-small:0.9rem;        /* single size for all secondary text */
   }
   *{box-sizing:border-box;}
@@ -46,13 +51,13 @@
   .hero-inner{display:flex;gap:34px;align-items:center;flex-wrap:wrap;}
   .photo{
     width:160px;height:160px;border-radius:50%;object-fit:cover;flex:none;
-    box-shadow:0 2px 12px rgba(60,45,25,.13);border:4px solid #1f1c17;
+    box-shadow:0 2px 12px rgba(60,45,25,.13);border:4px solid var(--ink);
   }
   .hero-text{flex:1;min-width:260px;}
   h1{
     font-weight:600;font-size:2.05rem;line-height:1.15;margin:0 0 6px;letter-spacing:.2px;
   }
-  .role{color:var(--muted);font-size:1.05rem;margin:0 0 8px;}
+  .role{color:var(--muted);font-size:1rem;margin:0 0 8px;}
   .affil{color:var(--muted);font-size:var(--fs-small);line-height:1.55;margin:0 0 16px;}
   .affil a{color:var(--muted);}
   .affil a:hover{color:var(--accent);}
@@ -78,12 +83,17 @@
   .paper{margin:0 0 14px;}
   .paper:last-child{margin-bottom:0;}
   .paper .title{font-weight:600;font-size:1.08rem;line-height:1.4;}
-  .paper .title .auth{font-weight:400;font-size:var(--fs-small);color:#5f5847;}
+  .paper .title .auth{font-weight:400;font-size:var(--fs-small);color:var(--ink-soft);}
   .paper .title .auth.block{display:block;margin-top:2px;line-height:1.3;}
-  .paper .details{margin-top:1px;font-size:var(--fs-small);line-height:1.45;padding-left:15px;color:#4a4438;}
+  .paper .details{margin-top:1px;font-size:var(--fs-small);line-height:1.45;padding-left:15px;color:var(--ink-soft);}
   .paper .details .line{margin:0;}
   .paper .details .line a{margin-right:16px;}
-  .paper .details .journal{font-weight:600;color:#171410;letter-spacing:.2px;}
+  .paper .details .journal{font-weight:600;color:var(--ink);}
+
+  /* Keyboard accessibility */
+  a:focus-visible,.btn:focus-visible{
+    outline:2px solid var(--accent);outline-offset:2px;border-radius:2px;
+  }
 
   @media (max-width:560px){
     body{font-size:16px;}
@@ -91,6 +101,14 @@
     .hero-inner{gap:20px;}
     .photo{width:118px;height:118px;}
     h1{font-size:1.9rem;}
+  }
+
+  @media print{
+    body{background:#fff;color:#000;font-size:11pt;}
+    .photo,.btn{display:none;}
+    section{border-top:1px solid #ccc;}
+    a{color:#000;text-decoration:underline;}
+    .paper{page-break-inside:avoid;}
   }
 </style>
 </head>
@@ -114,7 +132,7 @@
   </header>
 
   <div class="bio">
-    <p>I am an Associate Professor in the Department of Applied Economics at HEC Montréal. Before that, I was an Assistant Professor of Economics at Columbia University (2019–2026) and a graduate student at UCSD (2014–2019), where I obtained a Ph.D. in Economics.</p>
+    <p>I am an Associate Professor at HEC Montréal in the Department of Applied Economics. Before that, I was an Assistant Professor of Economics at Columbia University (2019–2026) and a graduate student at UCSD (2014–2019), where I obtained a Ph.D. in Economics.</p>
     <p>My research interests lie at the intersection of macro, labor, and finance. In ongoing work, I quantify the welfare effects of macroeconomic shocks (saving glut, tariffs, AI), with an emphasis on redistribution between workers and asset owners.</p>
   </div>
 
