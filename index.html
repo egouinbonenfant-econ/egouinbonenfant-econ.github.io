@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#fbf8f0" />
+<title>Émilien Gouin-Bonenfant</title>
+<meta name="description" content="Émilien Gouin-Bonenfant — Associate Professor of Economics at HEC Montréal. Research at the intersection of macro, labor, and finance." />
+<meta property="og:title" content="Émilien Gouin-Bonenfant" />
+<meta property="og:description" content="Associate Professor of Economics at HEC Montréal. Research at the intersection of macro, labor, and finance." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>É</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+<style>
+  :root{
+    --bg:#fbf8f0;             /* warm parchment */
+    --surface:#ffffff;
+    --ink:#1f1c17;
+    --muted:#6d6656;
+    --line:#e4ddcc;
+    --accent:#7c2f2a;         /* deep brick */
+    --accent-soft:#9c3f38;
+    --maxw:860px;
+    --fs-small:0.9rem;        /* single size for all secondary text */
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'EB Garamond',Georgia,'Times New Roman',serif;
+    font-size:19px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{color:var(--accent-soft);text-decoration:underline;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+
+  /* Hero */
+  header.hero{padding:56px 0 30px;}
+  .hero-inner{display:flex;gap:34px;align-items:center;flex-wrap:wrap;}
+  .photo{
+    width:160px;height:160px;border-radius:50%;object-fit:cover;flex:none;
+    box-shadow:0 2px 12px rgba(60,45,25,.13);border:4px solid #1f1c17;
+  }
+  .hero-text{flex:1;min-width:260px;}
+  h1{
+    font-weight:600;font-size:2.05rem;line-height:1.15;margin:0 0 6px;letter-spacing:.2px;
+  }
+  .role{color:var(--muted);font-size:1.05rem;margin:0 0 8px;}
+  .affil{color:var(--muted);font-size:var(--fs-small);line-height:1.55;margin:0 0 16px;}
+  .affil a{color:var(--muted);}
+  .affil a:hover{color:var(--accent);}
+  .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;}
+  .btn{
+    display:inline-block;border:1px solid var(--line);background:var(--surface);
+    color:var(--ink);padding:6px 14px;border-radius:7px;font-size:var(--fs-small);
+    transition:border-color .15s,box-shadow .15s,color .15s;
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;box-shadow:0 1px 6px rgba(60,45,25,.08);}
+  .btn.primary{background:var(--accent);color:#fbf8f0;border-color:var(--accent);}
+  .btn.primary:hover{background:var(--accent-soft);color:#fbf8f0;border-color:var(--accent-soft);}
+
+  /* Bio */
+  .bio{padding:6px 0 8px;font-size:0.95rem;line-height:1.6;}
+  .bio p{margin:0 0 12px;}
+
+  /* Sections */
+  section{padding:18px 0;border-top:1px solid var(--line);}
+  h2{
+    font-size:1.5rem;font-weight:600;margin:0 0 14px;color:var(--ink);
+  }
+  .paper{margin:0 0 14px;}
+  .paper:last-child{margin-bottom:0;}
+  .paper .title{font-weight:600;font-size:1.08rem;line-height:1.4;}
+  .paper .title .auth{font-weight:400;font-size:var(--fs-small);color:#5f5847;}
+  .paper .title .auth.block{display:block;margin-top:2px;line-height:1.3;}
+  .paper .details{margin-top:1px;font-size:var(--fs-small);line-height:1.45;padding-left:15px;color:#4a4438;}
+  .paper .details .line{margin:0;}
+  .paper .details .line a{margin-right:16px;}
+  .paper .details .journal{font-weight:600;color:#171410;letter-spacing:.2px;}
+
+  @media (max-width:560px){
+    body{font-size:18px;}
+    header.hero{padding:38px 0 22px;}
+    .hero-inner{gap:20px;}
+    .photo{width:118px;height:118px;}
+    h1{font-size:1.9rem;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-inner">
+      <img class="photo" src="assets/photo.jpg" alt="Émilien Gouin-Bonenfant" />
+      <div class="hero-text">
+        <h1>Émilien Gouin-Bonenfant</h1>
+        <p class="role">Associate Professor, HEC Montréal</p>
+        <p class="affil">3000 Côte-Sainte-Catherine, Montréal — office 4.146<br>
+          <a href="mailto:emilien.gouin-bonenfant@hec.ca">emilien.gouin-bonenfant@hec.ca</a></p>
+        <div class="links">
+          <a class="btn primary" href="assets/papers/cv.pdf">Curriculum Vitæ</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=t7r9BYQAAAAJ&hl=en">Google Scholar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="bio">
+    <p>I am an Associate Professor at HEC Montréal. Before that, I was an Assistant Professor of Economics at Columbia University (2019–2026) and a graduate student at UCSD (2014–2019), where I obtained a Ph.D. in Economics.</p>
+    <p>My research interests lie at the intersection of macro, labor, and finance. In ongoing work, I quantify the welfare effects of macroeconomic shocks (saving glut, tariffs, AI), with an emphasis on redistribution between workers and asset owners.</p>
+  </div>
+
+  <section id="working-papers">
+    <h2>Working Papers</h2>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/inelastic-capital.pdf">Inelastic Capital</a> <span class="auth">(with <a href="https://www.matthieugomez.com/">M. Gomez</a>)</span></div>
+      <div class="details">
+        <div class="line">July 2026</div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/monetary-policy-employment.pdf">Monetary Policy and Employment: Do Financial Constraints Matter?</a> <span class="auth">(with <a href="https://sites.google.com/site/julienjchampagnephd/">J. Champagne</a>)</span></div>
+      <div class="details">
+        <div class="line">October 2025</div>
+        <div class="line"><span class="journal">AEJ: Macroeconomics</span> — Conditionally accepted</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="published-papers">
+    <h2>Published Papers</h2>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/producing-tangible-intangible-capital.pdf">Producing Tangible and Intangible Capital</a> <span class="auth">(with <a href="https://www.matthieugomez.com/">M. Gomez</a>)</span></div>
+      <div class="details">
+        <div class="line"><span class="journal">AEA Papers and Proceedings</span> — May 2026</div>
+        <div class="line">
+          <a href="https://www.aeaweb.org/articles?id=10.1257/pandp.20261080">Publisher link</a>
+          <a href="https://doi.org/10.3886/E248216V1">Replication package</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/asset-price-redistribution.pdf">Asset-Price Redistribution</a> <span class="auth">(with <a href="https://sites.google.com/site/andreasfagereng/">A. Fagereng</a>, <a href="https://www.matthieugomez.com/">M. Gomez</a>, <a href="https://sites.google.com/site/martinblomhoffholm/">M. Holm</a>, <a href="https://benjaminmoll.com/">B. Moll</a>, <a href="https://sites.google.com/site/gjnatvik/">G. Natvik</a>)</span></div>
+      <div class="details">
+        <div class="line"><span class="journal">Journal of Political Economy</span> — November 2025</div>
+        <div class="line">NASDAQ award for the best paper on asset pricing (WFA 2024)</div>
+        <div class="line">
+          <a href="https://www.journals.uchicago.edu/doi/10.1086/736769">Publisher link</a>
+          <a href="assets/papers/asset-price-redistribution-supplement.pdf">Supplementary material</a>
+          <a href="https://doi.org/10.7910/DVN/TJD0VI">Replication package</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/wealth-inequality-low-rate.pdf">Wealth Inequality in a Low Rate Environment</a> <span class="auth">(with <a href="https://www.matthieugomez.com/">M. Gomez</a>)</span></div>
+      <div class="details">
+        <div class="line"><span class="journal">Econometrica</span> — January 2024</div>
+        <div class="line">Previously titled “A Q-Theory of Inequality”</div>
+        <div class="line">
+          <a href="https://www.econometricsociety.org/publications/econometrica/2024/01/01/Wealth-Inequality-in-a-Low-Rate-Environment">Publisher link</a>
+          <a href="https://doi.org/10.5281/zenodo.8336386">Replication package</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/pareto-extrapolation.pdf">Pareto Extrapolation: An Analytical Framework for Studying Tail Inequality</a> <span class="auth">(with <a href="https://alexisakira.github.io/">A. Toda</a>)</span></div>
+      <div class="details">
+        <div class="line"><span class="journal">Quantitative Economics</span> — January 2023</div>
+        <div class="line">
+          <a href="https://github.com/alexisakira/Pareto-extrapolation">Matlab codes for Pareto extrapolation</a>
+          <a href="https://www.econometricsociety.org/publications/quantitative-economics/2023/01/01/Pareto-extrapolation-An-analytical-framework-for-studying-tail-inequality">Publisher link</a>
+          <a href="https://www.econometricsociety.org/publications/quantitative-economics/2023/01/01/Pareto-extrapolation-An-analytical-framework-for-studying-tail-inequality/supp/QE1817_code_and_data.zip">Replication package</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/productivity-dispersion-labor-share.pdf">Productivity Dispersion, Between-Firm Competition, and the Labor Share</a></div>
+      <div class="details">
+        <div class="line"><span class="journal">Econometrica</span> — November 2022</div>
+        <div class="line">
+          <a href="https://www.econometricsociety.org/publications/econometrica/browse/2022/11/01/Productivity-Dispersion-Between-Firm-Competition-and-the-Labor-Share">Publisher link</a>
+          <a href="https://www.econometricsociety.org/publications/econometrica/2022/11/01/Productivity-Dispersion-Between-Firm-Competition-and-the-Labor-Share/supp/18612_Data_and_Programs.zip">Replication package</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="title"><a href="assets/papers/canadian-earnings-dynamics.pdf">Four Decades of Canadian Earnings Inequality and Dynamics across Workers and Firms</a><span class="auth block">(with <a href="https://economics.uwo.ca/people/faculty/bowlus.html">A. Bowlus</a>, <a href="https://scholar.google.com/citations?user=Sb3BV6wAAAAJ&hl=en">H. Liu</a>, <a href="https://economics.uwo.ca/people/faculty/lochner.html">L. Lochner</a>, <a href="https://www.bankofcanada.ca/profile/youngmin-park/">Y. Park</a>)</span></div>
+      <div class="details">
+        <div class="line"><span class="journal">Quantitative Economics</span> — November 2022</div>
+        <div class="line">
+          <a href="https://www.econometricsociety.org/publications/quantitative-economics/2022/11/01/Four-decades-of-Canadian-earnings-inequality-and-dynamics-across-workers-and-firms">Publisher link</a>
+          <a href="https://www.econometricsociety.org/publications/quantitative-economics/2022/11/01/Four-decades-of-Canadian-earnings-inequality-and-dynamics-across-workers-and-firms/supp/QE1846_code_and_data.zip">Replication package</a>
+          <a href="https://www.grid-database.org/">GRID</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
