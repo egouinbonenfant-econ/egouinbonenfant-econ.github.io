@@ -1,175 +1,186 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10pt]{article}
 
-\usepackage{hyperref}
-\usepackage{geometry}
-\usepackage{fancyhdr}
-\usepackage{sectsty}
 \usepackage[T1]{fontenc}
 \usepackage[sc,osf]{mathpazo}
+\usepackage[letterspace=60]{microtype}
+\usepackage[a4paper,left=2.3cm,right=2.3cm,top=1.8cm,bottom=2cm,
+            headheight=14pt,headsep=14pt,footskip=24pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
 
-\def\footerlink{https://egouinbonenfant-econ.github.io}
+\definecolor{rulegray}{gray}{0.62}
+\definecolor{softgray}{gray}{0.32}
 
-\def\name{\'Emilien Gouin-Bonenfant \\ \small HEC Montr\'eal,
-3000 C\^ote-Sainte-Catherine,
-Montr\'eal (office 4.146) \\
-\href{\footerlink}{\texttt{\footerlink}} \\
-\href{mailto:emilien.gouin-bonenfant@hec.ca}{\texttt{emilien.gouin-bonenfant@hec.ca}}
-}
-
-\fancyhead{} \fancyfoot{}
-\markright{\Large\sc\name }
-\fancyhead[RO]{\slshape \rightmark}
-\renewcommand{\headrulewidth}{1pt}
-\renewcommand{\footrulewidth}{1pt}
-\renewcommand{\headwidth}{\textwidth}
-\pagestyle{fancy}
+\newcommand{\name}{\'Emilien Gouin-Bonenfant}
+\newcommand{\siteurl}{https://egouinbonenfant-econ.github.io}
+\newcommand{\email}{emilien.gouin-bonenfant@hec.ca}
 
 \hypersetup{
-  colorlinks = true,
-  urlcolor = black,
-  pdfauthor = {\'Emilien Gouin-Bonenfant},
-  pdftitle = {\'Emilien Gouin-Bonenfant: Curriculum Vitae},
-  pdfsubject = {Curriculum Vitae},
+  colorlinks  = true,
+  urlcolor    = black,
+  linkcolor   = black,
+  pdfauthor   = {\'Emilien Gouin-Bonenfant},
+  pdftitle    = {\'Emilien Gouin-Bonenfant: Curriculum Vitae},
+  pdfsubject  = {Curriculum Vitae},
   pdfpagemode = UseNone
 }
+\urlstyle{same}
 
-\geometry{
-  left=1.1in,
-  right=1.1in,
-  top=0.6in,
-  bottom=1.5in,
-  includehead,
-  headheight=56pt,
-  headsep=25pt
-}
+\linespread{1.03}
+\frenchspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\clubpenalty=10000
+\widowpenalty=10000
+\raggedbottom
 
-\sectionfont{\rmfamily\mdseries\Large}
-\subsectionfont{\rmfamily\mdseries\itshape\large}
-\setlength\parindent{-2em}
+% Page 1: page number only. Later pages: quiet running name, no rule.
+\fancypagestyle{firstpage}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyfoot[C]{\footnotesize\thepage}}
+\fancypagestyle{later}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyhead[R]{\footnotesize\color{softgray}\textsc{\name}}%
+  \fancyfoot[C]{\footnotesize\thepage}}
+\pagestyle{later}
 
-\renewenvironment{itemize}{
-  \begin{list}{}{
-    \setlength{\leftmargin}{1em}
-  }
-}{
-  \end{list}
-}
+% Section headings: letterspaced small caps over a hairline rule
+\newcommand{\ruledtitle}[1]{\parbox[t]{\textwidth}{#1\par\vspace{3pt}%
+  {\color{rulegray}\hrule height 0.4pt}}}
+\titleformat{\section}[block]
+  {\large\scshape\lsstyle}{}{0pt}{\ruledtitle}
+\titlespacing*{\section}{0pt}{13pt}{6pt}
+
+% Every list starts flush with the section heading
+\setlist[itemize]{label={}, leftmargin=0pt, itemsep=2pt, topsep=0pt,
+                  parsep=0pt, partopsep=0pt}
+\newlist{entries}{itemize}{1}
+\setlist[entries]{label={}, leftmargin=0pt, itemsep=6pt, topsep=0pt,
+                  parsep=0pt, partopsep=0pt}
+
+% Talks: academic year in an aligned left column
+\newlist{talks}{description}{1}
+\setlist[talks]{leftmargin=5.6em, labelwidth=5.6em, labelsep=0pt, align=left,
+                font=\normalfont, itemsep=4pt, topsep=0pt, parsep=0pt}
+
+% Dated line (Positions, Education): text left, date right
+\newcommand{\dated}[2]{\item #1\hfill\mbox{#2}}
+% Secondary line under an entry
+\newcommand{\note}[1]{\par\nopagebreak{\small\leftskip=1em #1\par}}
+
+% Paper: title, then co-authors and venue on indented, smaller lines
+\newlength{\withindent}\setlength{\withindent}{1em}
+\newlength{\venueindent}\setlength{\venueindent}{1em}
+\newcommand{\paper}[3]{\item #1\par\nopagebreak
+  \ifx\relax#2\relax\else{\small\leftskip=\withindent with #2\par}\nopagebreak\fi
+  \ifx\relax#3\relax\else{\small\itshape\leftskip=\venueindent #3\par}\fi}
 
 \begin{document}
+\thispagestyle{firstpage}
 
-\section*{\sc Positions}
+\begin{center}
+  {\LARGE\textsc{\lsstyle \name}}\\[7pt]
+  {\small
+   HEC Montr\'eal, 3000 C\^ote-Sainte-Catherine, Montr\'eal (office 4.146)\\[1pt]
+   \url{\siteurl}\quad\textperiodcentered\quad\href{mailto:\email}{\email}}
+\end{center}
+\vspace{-8pt}
+
+\section*{Positions}
 \begin{itemize}
-  \item Associate Professor, HEC Montr\'eal (2026--)
-  \item Assistant Professor, Columbia University (2019--2026) \\
-  \phantom{s}Parental leaves (Fall 2021, Fall 2023)
-  \item Junior Associate Editor, Journal of Mathematical Economics (2024--2025)
-  \item Visiting Scholar, New York University (Spring 2023)
-  \item PhD Intern (Summer 2017), Bank of Canada \\
-  Research Assistant (2013--2014), Bank of Canada
+  \dated{Associate Professor, HEC Montr\'eal}{2026--}
+  \dated{Assistant Professor, Columbia University}{2019--2026}
+        \note{Parental leaves (Fall 2021, Fall 2023)}
+  \dated{Junior Associate Editor, Journal of Mathematical Economics}{2024--2025}
+  \dated{Visiting Scholar, New York University}{Spring 2023}
+  \dated{PhD Intern, Bank of Canada}{Summer 2017}
+  \dated{Research Assistant, Bank of Canada}{2013--2014}
 \end{itemize}
 
-\section*{\sc Education}
+\section*{Education}
 \begin{itemize}
-  \item Ph.D.\ Economics, University of California San Diego (2019)
-  \item M.A.\ Economics, University of California San Diego (2016)
-  \item B.Sc.\ Economics, Universit\'e de Montr\'eal (2013)
+  \dated{Ph.D.\ Economics, University of California San Diego}{2019}
+  \dated{M.A.\ Economics, University of California San Diego}{2016}
+  \dated{B.Sc.\ Economics, Universit\'e de Montr\'eal}{2013}
 \end{itemize}
 
-\section*{\sc Publications}
-\begin{itemize}
-\item Producing Tangible and Intangible Capital \\
-{\small \textit{with Matthieu Gomez}} \\
-{\small \textit{AEA Papers and Proceedings -- May 2026, Volume 116, p. 498-503}}
-\item Asset-Price Redistribution \\
-{\small \textit{with Andreas Fagereng, Matthieu Gomez, Martin Holm, Benjamin Moll, Gisle Natvik}} \\
-{\small \textit{Journal of Political Economy -- November 2025, Volume 133, Number 11, p. 3494-3549}}
-\item Wealth Inequality in a Low Rate Environment \\
-{\small \textit{with Matthieu Gomez}} \\
-{\small \textit{Econometrica -- January 2024, Volume 92, Issue 1, p. 201-246}}
-\item Pareto Extrapolation: An Analytical Framework for Studying Tail Inequality \\
-{\small \textit{with Alexis Akira Toda}} \\
-{\small \textit{Quantitative Economics -- January 2023, Volume 14, Issue 1, p. 201-233}}
-\item Productivity Dispersion, Between-Firm Competition, and the Labor Share \\
-{\small \textit{Econometrica -- November 2022, Volume 90, Issue 6, p. 2755-2793}}
-\item Four Decades of Canadian Earnings Inequality and Dynamics across Workers and Firms \\
-{\small \textit{with Audra Bowlus, Huju Liu, Lance Lochner, Youngmin Park}} \\
-{\small \textit{Quantitative Economics -- November 2022, Volume 13, Issue 4, p. 1447-1491}}
+\section*{Publications}
+\begin{entries}
+  \paper{Producing Tangible and Intangible Capital}
+        {Matthieu Gomez}
+        {AEA Papers and Proceedings -- May 2026, Volume 116, p.\ 498-503}
+  \paper{Asset-Price Redistribution}
+        {Andreas Fagereng, Matthieu Gomez, Martin Holm, Benjamin Moll, Gisle Natvik}
+        {Journal of Political Economy -- November 2025, Volume 133, Number 11, p.\ 3494-3549}
+  \paper{Wealth Inequality in a Low Rate Environment}
+        {Matthieu Gomez}
+        {Econometrica -- January 2024, Volume 92, Issue 1, p.\ 201-246}
+  \paper{Pareto Extrapolation: An Analytical Framework for Studying Tail Inequality}
+        {Alexis Akira Toda}
+        {Quantitative Economics -- January 2023, Volume 14, Issue 1, p.\ 201-233}
+  \paper{Productivity Dispersion, Between-Firm Competition, and the Labor Share}
+        {}
+        {Econometrica -- November 2022, Volume 90, Issue 6, p.\ 2755-2793}
+  \paper{Four Decades of Canadian Earnings Inequality and Dynamics across Workers and Firms}
+        {Audra Bowlus, Huju Liu, Lance Lochner, Youngmin Park}
+        {Quantitative Economics -- November 2022, Volume 13, Issue 4, p.\ 1447-1491}
+\end{entries}
+
+\section*{Working Papers}
+\begin{entries}
+  \paper{Inelastic Capital}
+        {Matthieu Gomez}
+        {}
+  \paper{Monetary Policy and Employment: Do Financial Constraints Matter?}
+        {Julien Champagne}
+        {American Economic Journal: Macroeconomics -- Forthcoming}
+\end{entries}
+
+\section*{External Presentations {\normalsize\normalfont\itshape(by academic year; $^*$scheduled)}}
+\begin{talks}
+  \item[2026--2027] UQAM$^*$, Universit\'e de Montr\'eal$^*$
+  \item[2025--2026] Princeton, Firm Dynamics and the Macroeconomy Conference (Atlanta Fed), Annual UTDT Economics Conference (Buenos Aires), SED Annual Meeting (Athens), NBER Summer Institute (Monetary Economics)
+  \item[2024--2025] Emory University, UT Austin, Philadelphia Junior Macro Workshop (Philly Fed), Minneapolis Fed, NBER EFG Winter 2025 (San Francisco Fed), NYC Area Macro Day (NYU)
+  \item[2023--2024] Kellogg (Finance), University of Connecticut, SED Annual Meeting (Barcelona)
+  \item[2022--2023] CIREQ Montreal Applied Economics Conference, 1st Annual Junior Workshop in Macroeconomics (UCSB), Princeton University, University of Pennsylvania, SED Annual Meeting (Cartagena)
+  \item[2021--2022] University of Minnesota, Macroeconomics of Inequality Conference (St.\ Louis Fed), University of Virginia, University of Wisconsin-Madison, QED Frontiers of Macroeconomics (Queen's University), China Biweekly Seminar on Public Economics, San Francisco Fed, SED Annual Meeting (Wisconsin), NBER Summer Institute (Micro Data and Macro Models)
+  \item[2020--2021] SITE, Second Conference for the Global Income Dynamics Project, Wharton (Finance), NYU, Stanford, SED Annual Meeting (Minneapolis)
+  \item[2019--2020] SITE (2x), IIES, Annual Employment Conference (Atlanta Fed), Yale, SEA Annual Meeting (Fort Lauderdale), Boston University, UC Santa Cruz
+  \item[2018--2019] Minneapolis Fed Junior Scholar Conference, UBC, Toronto (Rotman), Penn State, McGill, Princeton, Columbia, LSE, Bocconi, Fed Board, Georgetown, NYU, Toulouse, UCLA, Carnegie Mellon, SED Annual Meeting (St.\ Louis), Dallas Fed
+  \item[2017--2018] Bank of Canada, Universit\'e Laval, HEC Montr\'eal, Midwest Macro (Madison), SED Annual Meeting (Mexico City)
+\end{talks}
+
+\section*{Awards, Grants, and Fellowships}
+\begin{itemize}[itemsep=4pt]
+  \item NASDAQ Award for the Best Paper on Asset Pricing (WFA 2024, for \textit{Asset-Price Redistribution})
+  \item NSF Grant SES-2117398, ``Inequality and Welfare in a Low Rate Environment'' (2021--2024)
+        \note{with co-PI Matthieu Gomez}
+  \item Lavine scholar (2019--2020); SSHRC doctoral fellowship (2015--2019); Walter Heller Memorial Prize (2016--2017); Clive Granger Research Fellowship (2016--2017); UCSD Regent's fellowship (2014)
 \end{itemize}
 
-\section*{\sc Working papers}
-\begin{itemize}
-\item Inelastic Capital \\
-{\small \textit{with Matthieu Gomez}}
-\item Monetary Policy and Employment: Do Financial Constraints Matter? \\
-{\small \textit{with Julien Champagne}} \\
-{\small \textit{American Economic Journal: Macroeconomics -- Forthcoming}}
+\section*{Refereeing \& Other Services}
+\begin{itemize}[itemsep=4pt]
+  \item \textsc{Referee:}\enspace American Economic Journal: Applied Economics, American Economic Journal: Macroeconomics, American Economic Review, American Economic Review: Insights, BE Journal of Macroeconomics, Econometrica, Economic Theory, International Economic Review, Journal of Applied Econometrics, Journal of Development Economics, Journal of Econometrics, Journal of Economic Dynamics and Control, Journal of Mathematical Economics, Journal of Monetary Economics, Journal of Political Economy, Macroeconomic Dynamics, Quantitative Economics, Quarterly Journal of Economics, Review of Economic Dynamics, Review of Economics and Statistics, Review of Economic Studies, Scandinavian Journal of Economics
+  \item \textsc{Other services:}\enspace PhD admission (Columbia, 2020--2026), Columbia macro seminar organizer (Fall 2019, Spring 2020, Spring 2022, Spring 2023), SED organizing committee (2024, 2026), Columbia macro reading group organizer (2019, 2025), Journal of Mathematical Economics junior associate editor (2024--2025), Statistics Canada referee (2021)
 \end{itemize}
 
-\section*{\sc External Presentations {\small(by academic year; $^*$scheduled)}}
+\section*{Teaching}
 \begin{itemize}
-\item 2026--2027: UQAM$^*$, Universit\'e de Montr\'eal$^*$
-\item 2025--2026: Princeton, Firm Dynamics and the Macroeconomy Conference (Atlanta Fed), Annual UTDT Economics Conference (Buenos Aires), SED Annual Meeting (Athens), NBER Summer Institute (Monetary Economics)
-\item 2024--2025: Emory University, UT Austin, Philadelphia Junior Macro Workshop (Philly Fed), Minneapolis Fed, NBER EFG Winter 2025 (San Francisco Fed), NYC Area Macro Day (NYU)
-\item 2023--2024: Kellogg (Finance), University of Connecticut, SED Annual Meeting (Barcelona)
-\item 2022--2023: CIREQ Montreal Applied Economics Conference, 1st Annual Junior Workshop in Macroeconomics (UCSB), Princeton University, University of Pennsylvania, SED Annual Meeting (Cartagena)
-\item 2021--2022: University of Minnesota, Macroeconomics of Inequality Conference (St.\ Louis Fed), University of Virginia, University of Wisconsin-Madison, QED Frontiers of Macroeconomics (Queen's University), China Biweekly Seminar on Public Economics, San Francisco Fed, SED Annual Meeting (Wisconsin), NBER Summer Institute (Micro Data and Macro Models)
-\item 2020--2021: SITE, Second Conference for the Global Income Dynamics Project, Wharton (Finance), NYU, Stanford, SED Annual Meeting (Minneapolis)
-\item 2019--2020: SITE (2x), IIES, Annual Employment Conference (Atlanta Fed), Yale, SEA Annual Meeting (Fort Lauderdale), Boston University, UC Santa Cruz
-\item 2018--2019: Minneapolis Fed Junior Scholar Conference, UBC, Toronto (Rotman), Penn State, McGill, Princeton, Columbia, LSE, Bocconi, Fed Board, Georgetown, NYU, Toulouse, UCLA, Carnegie Mellon, SED Annual Meeting (St.\ Louis), Dallas Fed
-\item 2017--2018: Bank of Canada, Universit\'e Laval, HEC Montr\'eal, Midwest Macro (Madison), SED Annual Meeting (Mexico City)
+  \item Intermediate Macroeconomics (Undergraduate, UN3213)
+  \item Distributional Macroeconomics (Undergraduate, GU4913)
+  \item Macroeconomic Analysis I (PhD, GR6215)
+  \item Advanced Macroeconomic Analysis I (PhD, GR6220)
 \end{itemize}
 
-\section*{\sc Awards, Grants, and Fellowships}
+\section*{PhD Students}
 \begin{itemize}
-\item NASDAQ Award For the Best Paper on Asset Pricing (WFA 2024, for ``\textit{Asset-Price Redistribution}'')
-\item NSF Grant SES-2117398 ``Inequality and Welfare in a Low Rate Environment'' (2021--2024) \\
-{\small \textit{with co-PI Matthieu Gomez}}
-\item Lavine scholar (2019--2020);
-SSHRC doctoral fellowship (2015--2019);
-Walter Heller Memorial Prize (2016--2017);
-Clive Granger Research Fellowship (2016--2017);
-UCSD Regent's fellowship (2014)
-\end{itemize}
-
-\section*{\sc Refereeing \& Other services}
-\begin{itemize}
-    \item American Economic Journal: Applied Economics,
-    American Economic Journal: Macroeconomics,
-    American Economic Review,
-    American Economic Review: Insights,
-    BE Journal of Macroeconomics,
-    Econometrica,
-    Economic Theory,
-    International Economic Review,
-    Journal of Applied Econometrics,
-    Journal of Development Economics,
-    Journal of Econometrics,
-    Journal of Economic Dynamics and Control,
-    Journal of Mathematical Economics,
-    Journal of Monetary Economics,
-    Journal of Political Economy,
-    Macroeconomic Dynamics,
-    Quantitative Economics,
-    Quarterly Journal of Economics,
-    Review of Economic Dynamics,
-    Review of Economics and Statistics,
-    Review of Economic Studies,
-    Scandinavian Journal of Economics
-    \item \underline{Other services}: PhD admission (Columbia, 2020--2026), Columbia macro seminar organizer (Fall 2019, Spring 2020, Spring 2022, Spring 2023), Columbia macro reading group organizer (2019, 2025), Statistics Canada referee (2021), SED organizing committee (2024, 2026)
-\end{itemize}
-
-\section*{\sc Teaching}
-\begin{itemize}
-    \item Intermediate Macroeconomics (Undergraduate, UN3213)
-    \item Distributional Macroeconomics (Undergraduate, GU4913)
-    \item Macroeconomic Analysis I (PhD, GR6215)
-    \item Advanced Macroeconomic Analysis I (PhD, GR6220)
-\end{itemize}
-
-\section*{\sc PhD Students}
-\begin{itemize}
-    \item Wendy Morrison (2024): Minneapolis Federal Reserve Bank (Junior Scholar) + Duke University (Assistant Professor)
-    \item Madeline Hanson (2026/2027 economics job market)
+  \item Wendy Morrison (2024): Minneapolis Fed (Junior Scholar), Duke University (Assistant Professor)
+  \item Madeline Hanson (2026/2027 economics job market)
 \end{itemize}
 
 \end{document}
